@@ -1,0 +1,60 @@
+[
+    {
+        "id": "1",
+        "title": "Routing",
+        "description": [
+            "Next.js uses the file system to enable routing in the app. Next automatically treats every file with the extensions .js, .jsx, .ts, or .tsx under the pages directory as a route.",
+            "A page in Next.js is a React component that has a route based on its file name.",
+            "By default, Next.js pre-renders every page to make your app fast and user-friendly. It uses the Link (href='...') component provided by next/link to enable transitions between routes."
+        ]
+    },
+    {
+        "id": "2",
+        "title": "Dynamic routing",
+        "description": [
+            "Defining routes by using predefined paths is not always enough for complex applications. In Next.js you can add brackets to a page ([param]) to create a dynamic route (a.k.a. url slugs, pretty urls, and others).",
+            "Catch all routes can be made optional by including the parameter in double brackets ([[...slug]]).",
+            "We use 'useRouter' to get the 'dynamic path data' from the URL in the dynamic url file."
+        ]
+    },
+    {
+        "id": "3",
+        "title": "Components in Nextjs",
+        "description": [
+            "Components in nextjs work in the similar manner to ReactJS.",
+            "The only gotcha is that we cant save components in pages folder. If we save components in pages folder then they will be treated as pages."
+        ]
+    },
+    {
+        "id": "4",
+        "title": "Styles in NextJS",
+        "description": [
+            "Components in nextjs work in the similar manner to ReactJS.",
+            "The only gotcha is that we cant save components in pages folder. If we save components in pages folder then they will be treated as pages."
+        ]
+    },
+    {
+        "id": "5",
+        "title": "Data Fetching: Pre-rendering",
+        "description": [
+            "NextJS has two types of pre-rendering: Static Generation and Server-side Rendering",
+            "Next.js has three unique functions you can use to fetch data for pre-rendering.",
+            "getStaticProps (Static Generation): Fetch data at build time.",
+            "getStaticPaths (Static Generation): Specify dynamic routes to pre-render pages based on data.",
+            "getServerSideProps (Server-side Rendering): Fetch data on each request."
+        ]
+    },
+    {
+        "id": "6",
+        "title": "Static Generation",
+        "description": [
+            "We use it to pre-render a page (with data prepared on the server-side) during build time.",
+            "Pages are prepared ahead to time and can be cached by the server/CDN serving the app.",
+            "it is done using 'export async function getStaticProps(context){...}",
+            "If you export an async function called getStaticProps from a page, Next.js will pre-render this page at build time using the props returned by getStaticProps.",
+            "The code inside getStaticProps function will only run on the server side. It will never be fetched to client side and it doesnt have any access to the client side stuff like window property of the browser either.",
+            "You can import modules in top-level scope for use in getStaticProps. Imports used in getStaticProps will not be bundled for the client-side. This means you can write server-side code directly in getStaticProps. This includes reading from the filesystem or a database.",
+            "You should use getStaticProps if: The data required to render the page is available at build time ahead of a user’s request. The data comes from a headless CMS & The data can be publicly cached (not user-specific). Or the page must be pre-rendered (for SEO) and be very fast — getStaticProps generates HTML and JSON files, both of which can be cached by a CDN for performance."
+        ]
+    }
+]
